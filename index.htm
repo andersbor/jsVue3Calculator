@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div id="app">
+        <input v-model.number="number1" placeholder="Number" type="number">
+        <select v-model="operation" name="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input v-model.number="number2" placeholder="Number" type="number">
+        <button v-on:click="calculate()">=</button>
+        {{result}}
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
